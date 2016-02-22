@@ -1,0 +1,6 @@
+ErrorDocument 400 /errors/badrequest.php
+ErrorDocument 401 /errors/authreqd.php
+ErrorDocument 403 /errors/forbid.php
+ErrorDocument 404 /errors/notfound.php
+ErrorDocument 500 /errors/server.php
+

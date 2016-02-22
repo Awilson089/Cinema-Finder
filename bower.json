@@ -1,0 +1,10 @@
+{
+  "name": "aawilson.co.uk",
+  "version": "0.0.0",
+  "authors": [
+    "Adam Wilson <adamalexanderwilson@gmail.com>"
+  ],
+  "description": "Personal Site",
+  "license": "MIT",
+  "private": true
+}

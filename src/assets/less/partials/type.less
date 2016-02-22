@@ -1,0 +1,64 @@
+.ubuntu(@weight) {
+	font-weight:@weight; //100,300,400,600,700,800,900
+	font-family: 'Ubuntu', Arial, sans-serif;
+}
+
+h1 {
+	font-size: 50px;
+	color: #fff;
+}
+
+h2 {
+	font-size: 30px;
+	color: #868686;
+	line-height: 1.3em;
+}
+
+h3 {
+	font-size: 30px;
+	color: @primary-red;
+	line-height: 1.3em;
+}
+
+h4 {
+	font-size: 26px;
+	color: @primary-red;
+	line-height: 1.4em;
+}
+
+p {
+	.ubuntu(400);
+	color: @mid-grey;
+	font-size: 18px;
+	line-height: 36px;
+	small { font-size: 16px; line-height: 26px; }
+}
+
+/* Extra Small Devices, Phones */
+@media only screen and (max-width : 480px) {
+	h1 {
+		font-size: 30px;
+		&.large { font-size: 44px; }
+	}
+
+	h2 {
+		font-size: 24px;
+		line-height: 1.3em;
+	}
+
+	h3 {
+		font-size: 24px;
+		line-height: 1.3em;
+	}
+
+	h4 {
+		font-size: 20px;
+		line-height: 1.4em;
+	}
+
+	p {
+		font-size: 1em;
+		small { font-size: 0.875em; }
+	}
+}
+

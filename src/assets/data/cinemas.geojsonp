@@ -1,0 +1,51 @@
+cinemalist_callback({
+   "type": "CinemaCollection",
+   "metadata": {
+      "title": "UK Independent Cinema List",
+      "status": 200,
+      "api": "1.0",
+      "count": 1
+   },
+   "cinemas": [
+      {
+         "type": "Cinema",
+         "properties": {
+            "name": "Cottage Road",
+            "address": "Cottage Road Cinema, Headingley",
+            "city": "Leeds",
+            "postcode": "LS6 4DD",
+            "url": "http://www.cottageroad.co.uk/",
+            "status": "open",
+            "opened": "1902",
+            "icon": "http://maps.google.com/mapfiles/ms/icons/blue.png"
+         },
+         "geometry": {
+            "type": "Point",
+            "coordinates": [
+               -1.580882,
+               53.827175
+            ]
+         }
+      },
+      {
+         "type": "Cinema",
+         "properties": {
+            "name": "Cottage Road",
+            "address": "Cottage Road Cinema, Headingley",
+            "city": "Leeds",
+            "postcode": "LS7 3RE",
+            "url": "http://www.cottageroad.co.uk/",
+            "status": "open",
+            "opened": "1902",
+            "icon": "http://maps.google.com/mapfiles/ms/icons/blue.png"
+         },
+         "geometry": {
+            "type": "Point",
+            "coordinates": [
+               -1.580882,
+               53.827175
+            ]
+         }
+      }
+   ]
+});
