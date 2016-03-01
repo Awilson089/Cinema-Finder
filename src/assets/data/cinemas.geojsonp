@@ -18,34 +18,200 @@ cinemalist_callback({
             "status": "open",
             "opened": "1902",
             "icon": "http://maps.google.com/mapfiles/ms/icons/blue.png"
-         },
-         "geometry": {
-            "type": "Point",
-            "coordinates": [
-               -1.580882,
-               53.827175
-            ]
          }
       },
       {
          "type": "Cinema",
          "properties": {
-            "name": "Cottage Road",
-            "address": "Cottage Road Cinema, Headingley",
+            "name": "Hyde Park Picture House",
+            "address": "73 Brudenell Road",
             "city": "Leeds",
-            "postcode": "LS7 3RE",
-            "url": "http://www.cottageroad.co.uk/",
+            "postcode": "LS6 1JD",
+            "url": "http://www.hydeparkpicturehouse.co.uk/",
             "status": "open",
-            "opened": "1902",
+            "opened": "1914",
             "icon": "http://maps.google.com/mapfiles/ms/icons/blue.png"
-         },
-         "geometry": {
-            "type": "Point",
-            "coordinates": [
-               -1.580882,
-               53.827175
-            ]
          }
-      }
+      },
+      {
+         "type": "Cinema",
+         "properties": {
+            "name": "Plaza Cinema Truro",
+            "address": "69 Lemon Street",
+            "city": "Truro",
+            "postcode": "TR1 2PN",
+            "url": "http://wtwcinemas.co.uk/",
+            "status": "open",
+            "opened": "1936",
+            "icon": "http://maps.google.com/mapfiles/ms/icons/blue.png"
+         }
+      },
+      {
+         "type": "Cinema",
+         "properties": {
+            "name": "The Rex Cinema",
+            "address": "High Street (Three Close Lane)",
+            "city": "Berkhamsted",
+            "postcode": "HP4 2FG",
+            "url": "http://therexberkhamsted.com/",
+            "status": "open",
+            "opened": "1938",
+            "icon": "http://maps.google.com/mapfiles/ms/icons/blue.png"
+         }
+      },
+      {
+         "type": "Cinema",
+         "properties": {
+            "name": "The Electric Cinema",
+            "address": "47–49 Station Street",
+            "city": "Birmingham",
+            "postcode": "B5 4DY",
+            "url": "https://www.theelectric.co.uk/",
+            "status": "open",
+            "opened": "1909",
+            "icon": "http://maps.google.com/mapfiles/ms/icons/blue.png"
+         }
+      },
+      {
+         "type": "Cinema",
+         "properties": {
+            "name": "The Grosvenor",
+            "address": "24 Ashton Lane, Hillhead",
+            "city": "Glasgow West End",
+            "postcode": "G12 8SJ",
+            "url": "http://grosvenorwestend.co.uk/",
+            "status": "open",
+            "opened": "N/A",
+            "icon": "http://maps.google.com/mapfiles/ms/icons/blue.png"
+         }
+      },
+      {
+         "type": "Cinema",
+         "properties": {
+            "name": "Orion Cinema",
+            "address": "Cyprus Road",
+            "city": "Burgess Hill",
+            "postcode": "RH15 8DX",
+            "url": "http://www.orioncinema.com/",
+            "status": "open",
+            "opened": "N/A",
+            "icon": "http://maps.google.com/mapfiles/ms/icons/blue.png"
+         }
+      },
+      {
+         "type": "Cinema",
+         "properties": {
+            "name": "Prince Charles Cinema",
+            "address": "7 Leicester Place",
+            "city": "London",
+            "postcode": "WC2H 7BY",
+            "url": "http://www.princecharlescinema.com/",
+            "status": "open",
+            "opened": "1991",
+            "icon": "http://maps.google.com/mapfiles/ms/icons/blue.png"
+         }
+      },
+      {
+         "type": "Cinema",
+         "properties": {
+            "name": "Watershed",
+            "address": "1 Canons Road, Harbourside",
+            "city": "Bristol",
+            "postcode": "BS1 5TX",
+            "url": "http://www.watershed.co.uk/",
+            "status": "open",
+            "opened": "1982",
+            "icon": "http://maps.google.com/mapfiles/ms/icons/blue.png"
+         }
+      },{
+         "type": "Cinema",
+         "properties": {
+            "name": "Lynton Cinema",
+            "address": "Lee Road",
+            "city": "Lynton",
+            "postcode": "EX35 6HW",
+            "url": "http://www.lyntoncinema.co.uk/",
+            "status": "open",
+            "opened": "1916",
+            "icon": "http://maps.google.com/mapfiles/ms/icons/blue.png"
+         }
+      },{
+         "type": "Cinema",
+         "properties": {
+            "name": "Rio Cinema",
+            "address": "107 Kingsland High Street",
+            "city": "London",
+            "postcode": "E8 2PB",
+            "url": "http://riocinema.org.uk/",
+            "status": "open",
+            "opened": "1909",
+            "icon": "http://maps.google.com/mapfiles/ms/icons/blue.png"
+         }
+      },
+      {
+         "type": "Cinema",
+         "properties": {
+            "name": "THE HORSE HOSPITAL",
+            "address": "Colonnade, Bloomsbury",
+            "city": "London",
+            "postcode": "WC1N 1JD",
+            "url": "http://www.thehorsehospital.com/",
+            "status": "open",
+            "opened": "",
+            "icon": "http://maps.google.com/mapfiles/ms/icons/blue.png"
+         }
+      },
+      {
+         "type": "Cinema",
+         "properties": {
+            "name": "Rex Cinema",
+            "address": "Coronation Street",
+            "city": "Elland",
+            "postcode": "HX5 0DF",
+            "url": "http://elland.nm-cinemas.co.uk/",
+            "status": "open",
+            "opened": "1912",
+            "icon": "http://maps.google.com/mapfiles/ms/icons/blue.png"
+         }
+      },
+      {
+         "type": "Cinema",
+         "properties": {
+            "name": "Light House Media Centre",
+            "address": "The Chubb Buildings, Fryer Street",
+            "city": "Wolverhampton",
+            "postcode": "WV1 1HT",
+            "url": "http://light-house.co.uk/",
+            "status": "open",
+            "opened": "1987",
+            "icon": "http://maps.google.com/mapfiles/ms/icons/blue.png"
+         }
+      },
+      {
+         "type": "Cinema",
+         "properties": {
+            "name": "The Picture House",
+            "address": "High Street",
+            "city": "Uckfield",
+            "postcode": "TN22 1AS",
+            "url": "https://www.picturehouseuckfield.com",
+            "status": "open",
+            "opened": "1916",
+            "icon": "http://maps.google.com/mapfiles/ms/icons/blue.png"
+         }
+      },
+      {
+         "type": "Cinema",
+         "properties": {
+            "name": "  Palace Cinema",
+            "address": "Belle Vue Road, Cinderford",
+            "city": "Gloucestershire",
+            "postcode": "GL14 2AA",
+            "url": "http://www.cinderpal.com/",
+            "status": "open",
+            "opened": "1910",
+            "icon": "http://maps.google.com/mapfiles/ms/icons/blue.png"
+         }
+      },
    ]
 });
