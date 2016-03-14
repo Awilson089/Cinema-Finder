@@ -2,7 +2,7 @@ var map;
 var geocoder = null;
 var closest = [];
 var geo_markers = [];
-var latLng;
+var all_cinemas = [];
 
 function google_map() {
 	function initialize() {
@@ -20,7 +20,7 @@ function google_map() {
 		var input = document.getElementById('address');
 		var options = {
 		   types: ['(cities)'],
-		   componentRestrictions: {country: 'uk'}//Turkey only
+		   componentRestrictions: {country: 'uk'}//UK only
 		};
 		var autocomplete = new google.maps.places.Autocomplete(input, options);
 
@@ -32,26 +32,20 @@ function google_map() {
 
 	// Loop through the results array and place a marker for each
 	// set of coordinates.
-	window.cinemalist_callback = function (results) {
+	window.cinemalist_callback = function(results) {
+		all_cinemas = results;
 		for (var i = 0; i < results.cinemas.length; i++) {
 			var icon = results.cinemas[i].properties.icon;
-			geocoder.geocode({
-		        'address': results.cinemas[i].properties.postcode
-		    }, function (results, status) {
-		        if (status == google.maps.GeocoderStatus.OK) {
-					latLng = results[0].geometry.location;
+			var latLng = results.cinemas[i].geometry.location;
+			console.log(latLng);
 
-					var marker = new google.maps.Marker({
-						position: latLng,
-						icon: icon,
-						map: map
-					});
-		        } else {
-		            alert("Geocode was not successful for the following reason:"+ status);
-		        }
-		   	});
+			var marker = new google.maps.Marker({
+				position: latLng,
+				icon: icon,
+				map: map
+			});
+			geo_markers.push(marker);
 		}
-	   	sessionStorage.setItem('geo_markers', JSON.stringify(geo_markers));
 	}
 	google.maps.event.addDomListener(window, 'load', initialize)
 }
@@ -75,7 +69,7 @@ function convertAddress() {
                 position: pt
             });
 
-            findClosestN(pt, 2);
+            findClosestN(pt, 3);
         } else {
             alert('Geocode was not successful for the following reason: ' + status);
         }
@@ -84,17 +78,37 @@ function convertAddress() {
 
 function findClosestN(pt, numberOfResults) {
     var closest = [];
-    window.cinemalist_callback = function(results) {
-	    for (var i = 0; i < results.cinemas.length; i++) {
-	    	console.log(results.cinemas[i].properties.postcode);
-	        results.cinemas[i].distance = google.maps.geometry.spherical.computeDistanceBetween(pt, results.cinemas[i].getPosition());
-	        results.cinemas[i].setMap(null);
-	        closest.push(results.cinemas[i]);
-	    }
+    console.log(geo_markers);
+    for (var i = 0; i < geo_markers.length; i++) {
+        geo_markers[i].distance = google.maps.geometry.spherical.computeDistanceBetween(pt, geo_markers[i].getPosition());
+        closest.push(geo_markers[i]);
     }
-    console.log(closest);
     closest.sort(sortByDist);
-    return closest.splice(0,numberOfResults);
+    var near_cinemas = [];
+    near_cinemas = closest.splice(0,numberOfResults);
+
+    for (var i = 0; i < near_cinemas.length; i++) {
+        near_cinema = near_cinemas[i].getPosition();
+    }
+    sessionStorage.setItem('near_cinemas', near_cinemas);
+    sessionStorage.setItem('near_cinemas', near_cinemas);
+
+ 	// all_cinemas = results;
+	// for (var i = 0; i < results.cinemas.length; i++) {
+	// 	if(results.cinemas[i].geometry.location == sessionStorage.near_cinemas){
+
+	// 	}
+	// 	var icon = results.cinemas[i].properties.icon;
+	// 	var latLng = results.cinemas[i].geometry.location;
+	// 	console.log(latLng);
+
+	// 	var marker = new google.maps.Marker({
+	// 		position: latLng,
+	// 		icon: icon,
+	// 		map: map
+	// 	});
+	// 	geo_markers.push(marker);
+	// }
 }
 
 function sortByDist(a, b) {
@@ -105,13 +119,13 @@ $(document).ready(function() {
 	google_map();
 
 	$('#address').keypress(function (e) {
-	  if (e.which == 13) {
-	    convertAddress();
-	    return false
-	  }
+		if (e.which == 13) {
+			convertAddress();
+			return false
+		}
 	});
 
 	$('#location-form').submit(function () {
-	 return false;
+		return false;
 	});
 });

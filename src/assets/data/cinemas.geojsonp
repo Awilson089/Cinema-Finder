@@ -18,6 +18,12 @@ cinemalist_callback({
             "status": "open",
             "opened": "1902",
             "icon": "http://maps.google.com/mapfiles/ms/icons/blue.png"
+         },
+         "geometry": {
+            "location" : {
+               "lat" : 53.827178,
+               "lng" : -1.580882
+            },
          }
       },
       {
@@ -31,6 +37,12 @@ cinemalist_callback({
             "status": "open",
             "opened": "1914",
             "icon": "http://maps.google.com/mapfiles/ms/icons/blue.png"
+         },
+         "geometry": {
+            "location" : {
+               "lat" : 53.811719,
+               "lng" : -1.570739
+            },
          }
       },
       {
@@ -44,6 +56,12 @@ cinemalist_callback({
             "status": "open",
             "opened": "1936",
             "icon": "http://maps.google.com/mapfiles/ms/icons/blue.png"
+         },
+         "geometry": {
+            "location" : {
+               "lat" : 50.262007,
+               "lng" : -5.052024
+            },
          }
       },
       {
@@ -57,6 +75,12 @@ cinemalist_callback({
             "status": "open",
             "opened": "1938",
             "icon": "http://maps.google.com/mapfiles/ms/icons/blue.png"
+         },
+         "geometry": {
+            "location" : {
+               "lat" : 51.758752,
+               "lng" : -0.560399
+            },
          }
       },
       {
@@ -70,6 +94,12 @@ cinemalist_callback({
             "status": "open",
             "opened": "1909",
             "icon": "http://maps.google.com/mapfiles/ms/icons/blue.png"
+         },
+         "geometry": {
+            "location" : {
+               "lat" : 52.476569,
+               "lng" : -1.898824
+            },
          }
       },
       {
@@ -83,6 +113,12 @@ cinemalist_callback({
             "status": "open",
             "opened": "N/A",
             "icon": "http://maps.google.com/mapfiles/ms/icons/blue.png"
+         },
+         "geometry": {
+            "location" : {
+               "lat" : 55.874757,
+               "lng" : -4.293349
+            },
          }
       },
       {
@@ -96,6 +132,12 @@ cinemalist_callback({
             "status": "open",
             "opened": "N/A",
             "icon": "http://maps.google.com/mapfiles/ms/icons/blue.png"
+         },
+         "geometry": {
+            "location" : {
+               "lat" : 50.95621,
+               "lng" : -0.12919
+            },
          }
       },
       {
@@ -109,6 +151,12 @@ cinemalist_callback({
             "status": "open",
             "opened": "1991",
             "icon": "http://maps.google.com/mapfiles/ms/icons/blue.png"
+         },
+         "geometry": {
+            "location" : {
+               "lat" : 51.511494,
+               "lng" : -0.130237
+            },
          }
       },
       {
@@ -122,6 +170,12 @@ cinemalist_callback({
             "status": "open",
             "opened": "1982",
             "icon": "http://maps.google.com/mapfiles/ms/icons/blue.png"
+         },
+         "geometry": {
+            "location" : {
+               "lat" : 51.451624,
+               "lng" : -2.598213
+            },
          }
       },{
          "type": "Cinema",
@@ -134,6 +188,12 @@ cinemalist_callback({
             "status": "open",
             "opened": "1916",
             "icon": "http://maps.google.com/mapfiles/ms/icons/blue.png"
+         },
+         "geometry": {
+            "location" : {
+               "lat" : 51.230139,
+               "lng" : -3.835506
+            },
          }
       },{
          "type": "Cinema",
@@ -146,6 +206,12 @@ cinemalist_callback({
             "status": "open",
             "opened": "1909",
             "icon": "http://maps.google.com/mapfiles/ms/icons/blue.png"
+         },
+         "geometry": {
+            "location" : {
+               "lat" : 51.549529,
+               "lng" : -0.075556
+            },
          }
       },
       {
@@ -159,6 +225,12 @@ cinemalist_callback({
             "status": "open",
             "opened": "",
             "icon": "http://maps.google.com/mapfiles/ms/icons/blue.png"
+         },
+         "geometry": {
+            "location" : {
+               "lat" : 51.522793,
+               "lng" : -0.124354
+            },
          }
       },
       {
@@ -172,6 +244,12 @@ cinemalist_callback({
             "status": "open",
             "opened": "1912",
             "icon": "http://maps.google.com/mapfiles/ms/icons/blue.png"
+         },
+         "geometry": {
+            "location" : {
+               "lat" : 53.684864,
+               "lng" : -1.838105
+            },
          }
       },
       {
@@ -185,6 +263,12 @@ cinemalist_callback({
             "status": "open",
             "opened": "1987",
             "icon": "http://maps.google.com/mapfiles/ms/icons/blue.png"
+         },
+         "geometry": {
+            "location" : {
+               "lat" : 52.587294,
+               "lng" : -2.123321
+            },
          }
       },
       {
@@ -198,6 +282,12 @@ cinemalist_callback({
             "status": "open",
             "opened": "1916",
             "icon": "http://maps.google.com/mapfiles/ms/icons/blue.png"
+         },
+         "geometry": {
+            "location" : {
+               "lat" : 50.972628,
+               "lng" : 0.096585
+            },
          }
       },
       {
@@ -211,6 +301,12 @@ cinemalist_callback({
             "status": "open",
             "opened": "1910",
             "icon": "http://maps.google.com/mapfiles/ms/icons/blue.png"
+         },
+         "geometry": {
+            "location" : {
+               "lat" : 51.822019,
+               "lng" : -2.496788
+            },
          }
       },
    ]
