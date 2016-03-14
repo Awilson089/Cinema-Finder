@@ -86,11 +86,13 @@ function findClosestN(pt, numberOfResults) {
     var closest = [];
     window.cinemalist_callback = function(results) {
 	    for (var i = 0; i < results.cinemas.length; i++) {
+	    	console.log(results.cinemas[i].properties.postcode);
 	        results.cinemas[i].distance = google.maps.geometry.spherical.computeDistanceBetween(pt, results.cinemas[i].getPosition());
 	        results.cinemas[i].setMap(null);
 	        closest.push(results.cinemas[i]);
 	    }
     }
+    console.log(closest);
     closest.sort(sortByDist);
     return closest.splice(0,numberOfResults);
 }
@@ -107,5 +109,9 @@ $(document).ready(function() {
 	    convertAddress();
 	    return false
 	  }
+	});
+
+	$('#location-form').submit(function () {
+	 return false;
 	});
 });

@@ -9,7 +9,7 @@
 	<div class="map-wrap">
 	    <div id="map"></div>
 		<div class="map-form">
-			<form class="form-inline">
+			<form id="location-form" class="form-inline">
 				<div class="form-group">
 					<label for="location">Enter Your Location: </label>
 		   			<input type="text" id="address" name="location" value="Leeds" class="form-control">
