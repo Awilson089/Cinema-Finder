@@ -85,30 +85,24 @@ function findClosestN(pt, numberOfResults) {
     }
     closest.sort(sortByDist);
     var near_cinemas = [];
+    var near_cinema = [];
     near_cinemas = closest.splice(0,numberOfResults);
 
     for (var i = 0; i < near_cinemas.length; i++) {
-        near_cinema = near_cinemas[i].getPosition();
+        near_cinema.push(near_cinemas[i].getPosition());
     }
-    sessionStorage.setItem('near_cinemas', near_cinemas);
-    sessionStorage.setItem('near_cinemas', near_cinemas);
+    sessionStorage.setItem('near_cinemas', near_cinema);
 
- 	// all_cinemas = results;
-	// for (var i = 0; i < results.cinemas.length; i++) {
-	// 	if(results.cinemas[i].geometry.location == sessionStorage.near_cinemas){
-
-	// 	}
-	// 	var icon = results.cinemas[i].properties.icon;
-	// 	var latLng = results.cinemas[i].geometry.location;
-	// 	console.log(latLng);
-
-	// 	var marker = new google.maps.Marker({
-	// 		position: latLng,
-	// 		icon: icon,
-	// 		map: map
-	// 	});
-	// 	geo_markers.push(marker);
-	// }
+ 	window.cinemalist_callback = function(results) {
+	 	all_cinemas = results;
+		for (var i = 0; i < results.cinemas.length; i++) {
+			for (var i = 0; i < sessionStorage.near_cinema.length; i++) {
+				if(results.cinemas[i].geometry.location == sessionStorage.near_cinema[i]){
+					console.log('success')
+				}
+			}
+		}
+	}
 }
 
 function sortByDist(a, b) {
