@@ -15,6 +15,7 @@
 // 	------------------------------------------------------------------
 //	Global Styles
 // 	------------------------------------------------------------------
+
 	html, body { width: 100%; height: 100%; }
 
 	body {
@@ -61,12 +62,27 @@
 
 	header {
 		margin: 0 auto;
+		position: absolute;
+		width: 100%;
+		left: 0;
+		z-index: 9;
+    	box-shadow: 0 1px 2px rgba(0,0,0,.25);
+
 		nav {
 			margin: 0 !important;
 			li {
 				cursor: pointer;
-				a { }
+				a { color: #fff; }
 			}
+		}
+
+		.navbar-default {
+			border: none;
+			border-radius: 0;
+			a { color: #fff !important; }
+			background: @primary-red;
+			box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.35);
+			.active a { background-color: darken(@primary-red, 10%) !important; }
 		}
 	}
 
@@ -90,7 +106,7 @@
 
 	.map-wrap {
 		width: 100%;
-		height: 87.5%;
+		height: 100%;
 		position: relative;
 
 		#map {
@@ -100,13 +116,74 @@
 			padding: 0;
 		}
 		.map-form {
+			width: 45%;
 			position: absolute;
 			top: 50%;
 			left: 50%;
 			transform: translate(-50%, -50%);
-			background: #fff;
-			padding: 30px;
-			border-radius: 6px;
+			padding: 0;
+			z-index: 999;
+
+			input[type='text'] {
+				height: 60px;
+				width: 76%;
+				border-radius: 0;
+				float: left;
+				font-size: 18px;
+				box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.35);
+			}
+			.btn {
+				padding: 20px;
+			    min-width: 60px;
+			    text-align: center;
+			    margin: 0;
+			    float: left;
+			    border-radius: 0;
+				box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.35);
+			}
+			.location { background: darken(@primary-red, 5%) }
+		}
+	}
+
+	.nearest-cinema {
+		display: none;
+		overflow: hidden;
+		padding: 1.5em 0 2em;
+		background: #f2f2f2;
+		position: absolute;
+	    width: 100%;
+	    bottom: 0;
+	    h2 { margin-top: 0; }
+	    &.down { height: 12.5%; }
+
+	    .cinema {
+	    	h4 { margin-bottom: 0; }
+	    }
+	}
+
+	.info-window {
+		overflow: hidden;
+		.row { width: 100%; }
+	}
+
+	.image-grid {
+		position: absolute !important;
+	    width: 100%;
+	    height: 100% !important;
+	    left: 0;
+	    top: 0;
+	    overflow: hidden;
+	    z-index: 10;
+	    background: #f5f5f5;
+
+		.grid-item, .grid-sizer {
+			width: 25%;
+		}
+
+		.grid-item {
+			float: left;
+			overflow: hidden;
+			height: 175px;
 		}
 	}
 
