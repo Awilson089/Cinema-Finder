@@ -24,11 +24,13 @@ function google_map() {
 		});
 
 		var input = document.getElementById('address');
+		var nav_input = document.getElementById('nav-address');
 		var options = {
 		   types: ['(cities)'],
 		   componentRestrictions: {country: 'uk'} //UK only
 		};
 		var autocomplete = new google.maps.places.Autocomplete(input, options);
+		var nav_autocomplete = new google.maps.places.Autocomplete(nav_input, options);
  		var infowindow = new google.maps.InfoWindow();
     	var marker, i;
 
@@ -52,7 +54,7 @@ function google_map() {
 			var latLng = results.cinemas[i].geometry.location;
 
             var url = results.cinemas[i].properties.url;
-            var id = results.cinemas[i].id;
+            var id  = results.cinemas[i].id;
 
             var stripped_url = url.replace('http://','','/');
             var stripped_url = stripped_url.replace('/','');
@@ -71,7 +73,7 @@ function google_map() {
         			  		+'<p>'+results.cinemas[i].properties.address+'</p>'
                             +'<p><a href="'+url+'" target="_blank">'+stripped_url+'</a></p>'
                             +'<div class="row">'+
-				        		'<div class="col-sm-4">'+
+				        		'<div class="col-lg-4">'+
 				        			'<a href="#" onclick="cinema_history('+id+');  return false;" class="btn btn-primary mt1">View Info</a>'+
 				        		'</div>'
 			});
@@ -105,19 +107,19 @@ function save_nearest_cinemas(pt) {
         var distance = '<span class="glyphicon glyphicon-map-marker mr1" aria-hidden="true"></span>' + Math.ceil(closest[i].distance * 0.000621371192) + ' miles away';
 
         near_cinemas.push(closest[i].info.content +
-    		 '<div class="col-sm-8">'+
-    		 	'<p class="distance mt2 mb0">' + distance + '<p>'+
-    		 '</div>'+
-		 '</div>');
+			'<div class="col-lg-8">'+
+				'<p class="distance mt2 mb0">' + distance + '<p>'+
+			'</div>'+
+		'</div>');
     }
-    sessionStorage.setItem('near_cinemas', JSON.stringify(near_cinemas));
+
+	sessionStorage.setItem('near_cinemas', JSON.stringify(near_cinemas));
     show_nearest_cinemas();
 }
 
-function convert_address() {
+function convert_address(address) {
 	$('.map-form').fadeOut(400);
 
-    var address = document.getElementById('address').value;
     geocoder.geocode({
         'address': address
     }, function (results, status) {
@@ -185,6 +187,8 @@ function show_nearest_cinemas() {
 
     nearest_cinema_html = sessionStorage.getItem('near_cinemas');
     nearest_cinema_parsed = JSON.parse(nearest_cinema_html);
+
+    $('.data').empty();
     for (var i = 0; i < nearest_cinema_parsed.length; i++) {
 	    $('<div class="col-sm-4 col-md-3"><div class="cinema">'+nearest_cinema_parsed[i]+'</div></div>').appendTo(".data");
     }
@@ -201,6 +205,7 @@ function cinema_history(id) {
 	for (var i = 0; i < all_cinemas_parsed.length; i++) {
 		if(all_cinemas_parsed[i].id == id){
 			var img_url = all_cinemas_parsed[i].properties.name;
+			var img_url = img_url.replace(' ','_');
 			var img_url = img_url.replace(' ','_');
 			var img_url = img_url.toLowerCase();
 
@@ -252,14 +257,33 @@ $(document).ready(function() {
 		$(this).find('i').toggleClass('fa-chevron-down fa-chevron-up');
 	});
 
+	$('#location-form').submit(function () {
+		var address = document.getElementById('address').value;
+		convert_address(address);
+		return false;
+	});
+
 	$('#address').keypress(function (e) {
 		if (e.which == 13) {
-			convert_address();
+			$(this).parent().submit();
 			return false
 		}
 	});
 
-	$('#location-form').submit(function () {
+	$('#nav-location-form').submit(function () {
+		var address = document.getElementById('nav-address').value;
+		convert_address(address);
 		return false;
+	});
+
+	$('#nav-address').keypress(function (e) {
+		if (e.which == 13) {
+			$(this).parent().submit();
+			return false
+		}
+	});
+
+	$('#locate').click(function () {
+		use_location();
 	});
 });
