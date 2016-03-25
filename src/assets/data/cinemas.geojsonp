@@ -8,6 +8,7 @@ cinemalist_callback({
    },
    "cinemas": [
       {
+         "id": "1",
          "type": "Cinema",
          "properties": {
             "name": "Cottage Road",
@@ -27,6 +28,7 @@ cinemalist_callback({
          }
       },
       {
+         "id": "2",
          "type": "Cinema",
          "properties": {
             "name": "Hyde Park Picture House",
@@ -46,6 +48,7 @@ cinemalist_callback({
          }
       },
       {
+         "id": "3",
          "type": "Cinema",
          "properties": {
             "name": "Plaza Cinema Truro",
@@ -65,6 +68,7 @@ cinemalist_callback({
          }
       },
       {
+         "id": "4",
          "type": "Cinema",
          "properties": {
             "name": "The Rex Cinema",
@@ -84,6 +88,7 @@ cinemalist_callback({
          }
       },
       {
+         "id": "5",
          "type": "Cinema",
          "properties": {
             "name": "The Electric Cinema",
@@ -103,6 +108,7 @@ cinemalist_callback({
          }
       },
       {
+         "id": "6",
          "type": "Cinema",
          "properties": {
             "name": "The Grosvenor",
@@ -122,6 +128,7 @@ cinemalist_callback({
          }
       },
       {
+         "id": "7",
          "type": "Cinema",
          "properties": {
             "name": "Orion Cinema",
@@ -141,6 +148,7 @@ cinemalist_callback({
          }
       },
       {
+         "id": "8",
          "type": "Cinema",
          "properties": {
             "name": "Prince Charles Cinema",
@@ -160,6 +168,7 @@ cinemalist_callback({
          }
       },
       {
+         "id": "9",
          "type": "Cinema",
          "properties": {
             "name": "Watershed",
@@ -178,6 +187,7 @@ cinemalist_callback({
             },
          }
       },{
+         "id": "10",
          "type": "Cinema",
          "properties": {
             "name": "Lynton Cinema",
@@ -196,6 +206,7 @@ cinemalist_callback({
             },
          }
       },{
+         "id": "11",
          "type": "Cinema",
          "properties": {
             "name": "Rio Cinema",
@@ -215,9 +226,10 @@ cinemalist_callback({
          }
       },
       {
+         "id": "12",
          "type": "Cinema",
          "properties": {
-            "name": "THE HORSE HOSPITAL",
+            "name": "The Horse Hospital",
             "address": "Colonnade, Bloomsbury",
             "city": "London",
             "postcode": "WC1N 1JD",
@@ -234,6 +246,7 @@ cinemalist_callback({
          }
       },
       {
+         "id": "13",
          "type": "Cinema",
          "properties": {
             "name": "Rex Cinema",
@@ -253,6 +266,7 @@ cinemalist_callback({
          }
       },
       {
+         "id": "14",
          "type": "Cinema",
          "properties": {
             "name": "Light House Media Centre",
@@ -272,6 +286,7 @@ cinemalist_callback({
          }
       },
       {
+         "id": "15",
          "type": "Cinema",
          "properties": {
             "name": "The Picture House",
@@ -291,9 +306,10 @@ cinemalist_callback({
          }
       },
       {
+         "id": "16",
          "type": "Cinema",
          "properties": {
-            "name": "  Palace Cinema",
+            "name": "Palace Cinema",
             "address": "Belle Vue Road, Cinderford",
             "city": "Gloucestershire",
             "postcode": "GL14 2AA",
@@ -306,6 +322,26 @@ cinemalist_callback({
             "location" : {
                "lat" : 51.822019,
                "lng" : -2.496788
+            },
+         }
+      },
+      {
+         "id": "17",
+         "type": "Cinema",
+         "properties": {
+            "name": "The Regal Cinema",
+            "address": "The Platt",
+            "city": "Wadebridge",
+            "postcode": "PL27 7AD",
+            "url": "http://wtwcinemas.co.uk/wadebridge-the-regal-cinema/",
+            "status": "open",
+            "opened": "1931",
+            "icon": "http://maps.google.com/mapfiles/ms/icons/blue.png"
+         },
+         "geometry": {
+            "location" : {
+               "lat" : 50.515554,
+               "lng" : -4.836108
             },
          }
       },
