@@ -18,18 +18,18 @@ gulp.task('uglify', function() {
 
 gulp.task('less', function () {
     return gulp.src('src/assets/less/style.less')
-        .pipe(plumber({
-            errorHandler: function (err) {
-                console.log(err);
-                this.emit('end');
-            }
-        }))
-        .pipe(less({compress: true}))
-        .pipe(autoprefixer('last 10 versions', 'ie 9'))
-        .pipe(minifyCSS({keepBreaks: false}))
-        .pipe(gulp.dest('src/assets/css/'))
-        .pipe(gulp.dest('build/css/'))
-        .pipe(livereload());
+    .pipe(plumber({
+        errorHandler: function (err) {
+            console.log(err);
+            this.emit('end');
+        }
+    }))
+    .pipe(less({compress: true}))
+    .pipe(autoprefixer('last 10 versions', 'ie 9'))
+    .pipe(minifyCSS({keepBreaks: false}))
+    .pipe(gulp.dest('src/assets/css/'))
+    .pipe(gulp.dest('build/css/'))
+    .pipe(livereload());
 });
 
 // Watch Files For Changes
