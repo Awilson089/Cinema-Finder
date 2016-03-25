@@ -9,24 +9,26 @@
 	<div class="map-wrap">
 	    <div id="map"></div>
 
-		<div class="lander">
-			<div class="map-form">
-				<form id="location-form" class="form-inline">
-		   			<input type="text" id="address" name="location" value="Leeds" class="form-control">
-                    <a href="#" class="btn btn-primary location" onclick="use_location();"><span class="glyphicon glyphicon-screenshot" aria-hidden="true"></span></a>
-					<button type="submit" onclick="convert_address();" class="btn btn-primary">Search</button>
-				</div>
+		<div class="map-form">
+			<div class="logo">Silver Screen</div>
+			<div class="strap">Independent Cinema Finder</div>
+
+			<form id="location-form" class="form-inline">
+	   			<input type="text" id="address" name="location" value="Leeds" class="form-control">
+                <a href="#" id="locate" class="btn btn-primary location"><span class="glyphicon glyphicon-screenshot" aria-hidden="true"></span></a>
+				<button type="submit" id="search" class="btn btn-primary">Search</button>
 			</form>
-			<div class="grid image-grid">
-				<div class="grid-sizer"></div>
-			</div>
+		</div>
+
+		<div class="grid image-grid">
+			<div class="grid-sizer"></div>
 		</div>
 
 		<div class="nearest-cinema">
 			<div class="container-fluid">
 				<div class="row">
 					<div class="col-sm-12">
-						<h2>Nearest Cinemas <span href="#" class="pull-right toggler"><i class="fa fa-chevron-down"></i></span></h2>
+						<h3>Nearest Cinemas <span href="#" class="pull-right toggler"><i class="fa fa-chevron-down"></i></span></h3>
 					</div>
 				</div>
 				<div class="row">
